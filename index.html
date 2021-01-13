@@ -57,17 +57,17 @@
                     const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
                     labelContainer.childNodes[i].innerHTML = classPrediction;
 
-                    if(result.scores[i].toFixed(2) >= 0.95 && classLabels[i] =="Background Noise"){
+                    if(result.scores[i].toFixed(2) >= 0.80 && classLabels[i] =="Background Noise"){
                         // console.log("Background Noise");
                         $('#emoji').html('<img id="theImg" src="images/back-noise.jpeg" />');
                     }
-                    else if(result.scores[i].toFixed(2) >= 0.95 && classLabels[i] =="Claps"){
+                    else if(result.scores[i].toFixed(2) >= 0.80 && classLabels[i] =="Claps"){
                         console.log("Claps");
                         $('#emoji').html('<img id="theImg" src="images/clap.png" />');
-                    } else if(result.scores[i].toFixed(2) >= 0.95 && classLabels[i] =="Snaps"){
+                    } else if(result.scores[i].toFixed(2) >= 0.80 && classLabels[i] =="Snaps"){
                         console.log("Snaps");
                         $('#emoji').html('<img id="theImg" src="images/snap.png" />');
-                    } else if(result.scores[i].toFixed(2) >= 0.95 && classLabels[i] =="Whistle"){
+                    } else if(result.scores[i].toFixed(2) >= 0.80 && classLabels[i] =="Whistle"){
                         console.log("Whistle");
                         $('#emoji').html('<img id="theImg" src="images/whistle.png" />');
                     }
